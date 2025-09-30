@@ -1,0 +1,162 @@
+335  Abrami  Emma
+731  Albertelli  Elena Stefania
+710  Albertelli  Laura
+222  Albertini  Anna Maria
+21  Angeloni  Luciano
+745  Apostoli  Antonella
+743  Archetti  Graziano
+782  Ardigo  Gabriella
+689  Bassani  Marisa
+507  Begni  Alessandro
+505  Begni  Federica
+454  Begotti  Bruna
+708  Belotti  Angelo
+703  Benini  Clara
+674  Berardi  Oriana
+764  Bernori  Giulia
+757  Bertolotti  Clara
+780  Bezzi  Francesca
+503  Birbes  Luigia
+627  Bodei  Luca
+586  Boghetta  Lidia
+640  Bogna  Vincenzo
+730  Boifava  Cesarina
+756  Boizza  Maria
+585  Bonardi  Annamaria
+716  Bonetti  Sergio
+695  Bono  Annamaria
+520  Borlenghi  Erika
+687  Bossini  Massimo
+729  Botturi  Luciano
+749  Bracca  Paola
+661  Bresciani  Fausto
+754  Brunori  Laura
+677  Buffoli  Graziella
+744  Capelli  Gabriella
+559  Capriotti  Enrico
+576  Capriotti  Giulia
+582  Capriotti  Mara
+574  Capriotti  Marco
+588  Capriotti  Rosa
+47  Cartapani  Domenico
+489  Casali  Giovanni Pietro
+700  Castigliego  Luca
+673  Cavagna  Lidio
+567  Cavallaro  Bertilla
+725  Cherubini  Giulio
+15  Cogoi  Renata
+164  Coianiz  Carletto
+596  Contini  Graziella
+569  Crescimbeni  Mariangela
+717  D'Elia  Loredana
+682  Dalceggio  Daniela
+410  De Faveri  Tullio
+705  Della Moretta  Anna
+11  Di Bartolomei  Mauro
+701  Dioni  Roberto
+721  Disha  Liljana
+762  Facchetti  Francesca
+727  Facchi  Maria Cecilia
+467  Faglia  Annalisa
+91  Falconi  Giovanni
+551  Ferremi  Gianfranca
+732  Fornaro  Giovanna
+22  Frassine  Graziano
+435  Gazzotti  Giovanni
+625  Ghia  Carolina
+784  Giovannini  Barbara
+742  Gitti  Gregorio
+741  Gnutti  Marco
+728  Gorio  Carlo
+736  Gozio  Emanuela
+39  Guerini  Ugo
+19  Izzi  Teodosio
+614  Lamorgese  Cinzia
+767  Lancini  Giacomina
+406  Lazzari Pezzottini  Ivonne
+711  Lazzaroni  Fiorina
+490  Liberini  Caterina
+339  Linardi  Rosanna
+568  Lorandi  Daniela Mariangiola
+555  Manenti  Salvatore
+266  Marchetti  Lucia
+623  Marini  Giuseppina
+751  Medda  Leandro
+437  Medeghini  Maria
+709  Merigo  Angela
+706  Micheletti  Federica
+463  Micheletti  Moira
+748  Milanesi  Carolina
+755  Milesi  Giuseppe
+413  Missora Izzi  Ebe
+684  Molinari  Maria
+735  Monfredini  Miranda
+32  Montagnini  Maria
+626  Muffolini  Giovanni
+740  Niboli  Pier Andreino
+781  Ogna  Alessandra
+643  Pagliuca  Achille
+644  Pagliuca  Maria Luisa
+659  Pampaloni  Alessandra
+27  Panada  Adriana
+575  Papagno  Fausta
+401  Pavoni  Flavio
+739  Pavoni  Tiziano
+363  Pelizzari  Anna Maria
+726  Pelizzari  Paolo
+9  Pellegrino  Innocenza
+619  Pellegrino  Marco
+407  Pezzottini  Giovanni
+584  Pianta  Monica
+655  Piccioli  Gianluigi
+738  Piccioli  Paolo
+759  Pietta  Maria Rosa
+753  Pipolo  Brunella
+707  Ravelli  Maria
+504  Raza  Lara
+446  Re  Alessandro
+660  Recaldini  Giuseppe
+714  Resconi  Franco
+632  Rexenergy S.R.L.  Sig. Lo Co
+747  Ribolla  Rossella
+322  Robecchi  Franco
+769  Rocco  Cristiano
+16  Romanini  Vittorina 
+3  Rossi  Giuseppe
+229  Rossi  Silvano
+600  Rota  Alessia
+758  Sabbadini  Mario
+90  Sagliocca  Angelo
+647  Saresini  Domenico
+752  Savoldelli  Flavio
+713  Scaratti  Gabriella
+549  Scarpari  Paolo
+615  Scipione  Maria
+704  Serani  Caterina
+563  Serra  Antonio
+718  Simoncelli  Marialisa
+724  Sozzi  Elisabetta
+783  Spinelli  Maria Grazia
+590  Spinoni  Bruno
+765  Stabile  Silvia
+734  Stroppa  Nadia
+746  Taetti Zanardelli  Giacomo A
+29  Talenti  Alba
+719  Tecchioli  Ottorino
+737  Tecchioli Montani S.n.c.  
+768  Tomasoni  Francesca
+263  Tonelli  Milena
+733  Tonolini  Claudia
+763  Treccani  Francesca
+617  Treccani  Liliana
+312  Tucci  Alessandra
+207  Tucci  Salvatore
+40  Verzura  Paola
+493  Vezzoli Curone  Agostina
+766  Visani  Mara
+723  Zambolin  Giulia
+349  Zoni  Raffaello
+537  Zuelli  Giuseppe
+ 
+Numero iscritti: 159
+
