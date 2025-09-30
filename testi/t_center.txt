@@ -1,0 +1,8 @@
+<fieldset> 
+<legend>Article</legend> 
+Contiene l'articolo della voce di men&ugrave;. 
+<br ><br ><br ><br ><br >
+<br ><br ><br ><br ><br >
+<br ><br ><br ><br ><br >
+<br ><br ><br >
+</fieldset>

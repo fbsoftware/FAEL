@@ -1,0 +1,7 @@
+<fieldset> <legend>Aside (destro)</legend>
+Testo correlato all'articolo.
+<br ><br ><br ><br ><br >
+<br ><br ><br ><br ><br >
+<br ><br ><br ><br ><br >
+<br ><br ><br > 
+ </fieldset>
