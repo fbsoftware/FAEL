@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANAGRAFICO FAEL</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+    <script>
+$(function () {
+
+    $("#cerca_anagrafico").autocomplete({
+        minLength: 2,
+        source: "autocomplete_anagrafico.php",
+
+        select: function (event, ui) {
+            $("#anagrafico_id").val(ui.item.id);
+
+            $.get("get_anagrafico.php", { id: ui.item.id }, function (html) {
+                $("#scheda_anagrafico").html(html);
+            });
+        }
+    });
+
+});</script>
+</head>
+<body><label for="cerca_anagrafico">Cerca anagrafico:</label>
+
+<input type="text" id="cerca_anagrafico" placeholder="Cerca cognome o codice">
+<input type="hidden" id="anagrafico_id">
+
+<div id="scheda_anagrafico"></div>
+</body>
+</html>

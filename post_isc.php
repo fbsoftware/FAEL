@@ -18,18 +18,48 @@ $cod_fisc           =strtoupper($_POST['cod_fisc']);
 $nascita_luogo      =addslashes($_POST['nascita_luogo']);
 $nascita_provincia  =$_POST['nascita_provincia'];
 $nascita_nazione    =$_POST['nascita_nazione'];
-//$dat                = new data($_POST['nascita_data']);
-//$nascita_data       = $dat->flipdata();
-$date	  		=date_create($_POST['nascita_data']);
-$nascita_data 	  =date_format($date,"d/m/Y");
-//$dat                = new data($_POST['data_iscrizione']);
-//$data_iscrizione    = $dat->flipdata();
-$date	  		=date_create($_POST['data_iscrizione']);
-$data_iscrizione 	  =date_format($date,"d/m/Y");
-//$dat                = new data($_POST['data_uscita']);
-//$data_uscita        = $dat->flipdata();
-$date	  		=date_create($_POST['data_uscita']);
-$data_uscita 	  =date_format($date,"d/m/Y");
+//-----------------------------------------------------
+$nascita_data = '';
+
+if (!empty($_POST['nascita_data'])) {
+
+    $date = DateTime::createFromFormat(
+        'd/m/Y',
+        $_POST['nascita_data']
+    );
+
+    if ($date) {
+        $nascita_data = $date->format('Y-m-d');
+    }
+}
+//-----------------------------------------------------
+$data_iscrizione = '';
+
+if (!empty($_POST['data_iscrizione'])) {
+
+    $date = DateTime::createFromFormat(
+        'd/m/Y',
+        $_POST['data_iscrizione']
+    );
+
+    if ($date) {
+        $data_iscrizione = $date->format('Y-m-d');
+    }
+}
+//-----------------------------------------------------
+$data_uscita = '';
+if (!empty($_POST['data_uscita'])) {
+
+    $date = DateTime::createFromFormat(
+        'd/m/Y',
+        $_POST['data_uscita']
+    );
+
+    if ($date) {
+        $data_uscita = $date->format('Y-m-d');
+    }
+}
+//-----------------------------------------------------
 $tipologia          =$_POST['tipologia'];
 $icons_ese          =$_POST['icons_ese'];
 $icons_dir          =$_POST['icons_dir'];

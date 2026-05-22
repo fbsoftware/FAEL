@@ -41,20 +41,20 @@ class bottoni_str_par
                }             
         public function btn()           //  bottoni gestione
           {      
-                echo    "<fieldset>";
+                echo  "<fieldset style='display:flex; align-items: baseline;'>";
                               
                 // immagine ampiezza=1
-                echo "<div class='col-sm-1'>";
+                echo "<div style='flex: 1;'>";
                 echo "<img src='images/$this->tabella.png' alt='manca img' height='50'> ";
                 echo    "</div>";
                 
                 // titolo ampiezza=44
-                echo "<div class='col-sm-4 text-center'>";
+                echo "<div style='flex: 1;'>";
                 echo "<h1>&nbsp;$this->titolo</h1>";
                 echo    "</div>";
                 
                 // bottoni ampiezza=7
-                echo    "<div class='btn-group col-sm-7 text-right'>"; 
+                echo "<div style='flex: 2;'>"; 
                 echo    "<form method='post' id='$this->tabella' action='$this->callbk' onkeypress='return event.keyCode != 13;'>" ;
                $length = count($this->param);
                for ($i = 0; $i < $length; $i++) 

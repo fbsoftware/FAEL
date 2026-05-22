@@ -13,6 +13,8 @@
 ============================================================================= */
 // DOCTYPE & head
 include_once 'include_gest.php';
+//ini_set('display_errors', 1);
+//error_reporting(E_ALL);
 $head = new getBootHead('gestione iscritti');
      $head->getBootHead(); 
 echo "</head>"; 
@@ -24,9 +26,12 @@ $azione  =$_POST['submit'];
 switch ($azione)
 {
 case 'esci':
-          $loc = "location:index.php?urla=widget.php&pag=";
-          header($loc);
-          break;
+{
+    $_SESSION['esito'] = 2;
+    error_log("DEVO USCIRE");
+    header("Location: index.php?urla=widget.php&pag=");
+    break;
+}
           
 case 'ritorno':  
           $_SESSION['esito'] = 2;
@@ -35,7 +40,7 @@ case 'ritorno':
 case 'nuovo':  
 case 'a-iscritti':
 $stato=$_SESSION['pag']; 
-           $sql = "INSERT INTO `".DB::$pref."isc` 
+          $sql = "INSERT INTO `".DB::$pref."isc` 
                          (id,numero_iscrizione,titolo,titolo_plus,cognome,
                          nome,indirizzo,cap,localita,telefono,
                          cellulare,cod_fisc,nascita_luogo,
@@ -55,6 +60,7 @@ $PDO->beginTransaction();
           $PDO->exec($sql);    
           $PDO->commit();
           $_SESSION['esito'] = 54;
+          error_log("nuovo salvini");
           break;
 
 case 'modifica':
@@ -96,7 +102,7 @@ $PDO->beginTransaction();
                          $_SESSION['esito'] = 53;
                          break;
 case 'archivia':
-            $sql = "UPDATE `".DB::$pref."isc` 
+           $sql = "UPDATE `".DB::$pref."isc` 
                          SET stato='A', data_uscita='$data_uscita', note='$note'
                          WHERE id= '$id' ";
 // transazione    
@@ -131,6 +137,6 @@ $PDO->beginTransaction();
 default:
                          $_SESSION['esito'] = 2;
 } 
-          $loc = "location:index.php?".$_SESSION['location']."";
+          $loc = "Location:index.php?urla=widget.php&pag=";
 		header($loc);
 ?>

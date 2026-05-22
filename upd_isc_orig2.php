@@ -14,16 +14,14 @@
    * 02/03/2022 - aggiunta data uscita
 ============================================================================= */
 // DOCTYPE & head
-//ini_set('display_errors', 1);
-//error_reporting(E_ALL);
 include_once 'include_gest.php';
 $head = new getBootHead('gestione iscritti');
      $head->getBootHead(); 
      echo "</head>";   
 include_once('post_isc.php');
-$tipo = "I";  // default <iscritti>
-$azione   = $_POST['submit'];           
-//print_r($_POST); 
+$tipo     = $_SESSION['pag'];
+$id       = $_GET['id'];
+$azione   = $_POST['submit'];           //print_r($_POST); echo "<br />ID=".$id;//debug
                                         
 // test effettuata scelta id (Escluso 'nuovo')
 if (
@@ -32,9 +30,10 @@ if (
      )
      { 
      $_SESSION['esito'] = 4;
-     //$loc = "location:index.php?".$_SESSION['location']."";
-     //header($loc);                          
+     $loc = "location:index.php?".$_SESSION['location']."";
+     header($loc);                          
      }
+
 // mostra stringa bottoni o chiude
      // contenitore
      echo     "<div class='container form-horizontal'>"; 
@@ -116,9 +115,9 @@ switch ($azione)
      $ins = new DB_ins('isc','numero_iscrizione'); 
      $fa = new input(array($ins->insert1(),'numero_iscrizione',5,'Numero iscrizione','','rb'));
           $fa->field();
-     $tb = new DB_tip_i('tit','titolo','A','Titolo','');          
+     $tb = new DB_tip_i('tit','titolo','A','Titolo');          
           $tb->select();
-     $tc = new DB_tip_i('tit+','titolo_plus',' ','Segue titolo','');   
+     $tc = new DB_tip_i('tit+','titolo_plus',' ','Segue titolo');   
           $tc->select();
      $fd = new input(array(' ','cognome',25,'Cognome','','ir'));               
           $fd->field();
@@ -130,7 +129,7 @@ switch ($azione)
           $fg->field();
      $fh = new input(array('','localita',25,'Localit&agrave;','','i'));      
           $fh->field();
-     $ft = new DB_tip_i('pr','prov',' ','Provincia','');          
+     $ft = new DB_tip_i('pr','prov',' ','Provincia');          
           $ft->select();
      echo  "</fieldset>"; 
      echo "</div>";   // col
@@ -160,7 +159,7 @@ switch ($azione)
           $fv->field();
      $fs = new input(array('','archiviare',2,'Coniuge','C=coniuge di altro iscritto','i'));               
           $fs->field(); 
-     $fty = new DB_tip_i('prt','stampa',0,'Stampa','');          
+     $fty = new DB_tip_i('prt','stampa',0,'Stampa');          
           $fty->select();
      $fx = new input(array($note,'note',33,'Note','','i'));                  
           $fx->field();
@@ -172,13 +171,13 @@ switch ($azione)
      echo     "<div class='row '>";
      echo     "<div class='col-md-6'>";
      echo "<fieldset><legend> Incarichi e cariche </legend>"; 
-     $t1 = new DB_tip_i('tipo','tipologia','1','Socio','');               
+     $t1 = new DB_tip_i('tipo','tipologia','1','Socio');               
           $t1->select();      
-     $t2 = new DB_tip_i('car','icons_dir','','Consiglio direttivo','');  
+     $t2 = new DB_tip_i('car','icons_dir','','Consiglio direttivo');  
           $t2->select();     
-     $t3 = new DB_tip_i('car','icons_ese','','Comitato esecutivo','');     
+     $t3 = new DB_tip_i('car','icons_ese','','Comitato esecutivo');     
           $t3->select(); 
-     $t3 = new DB_tip_i('vol','volontario',0,'Volontario','');     
+     $t3 = new DB_tip_i('vol','volontario',0,'Volontario');     
           $t3->select();   		  
      echo  "</fieldset>";
      echo  "</div>";   //col
@@ -206,9 +205,9 @@ foreach($PDO->query($sql) as $row)
           $fz->field();
      $fa = new input(array($numero_iscrizione,'numero_iscrizione',5,'Numero iscrizione','Numero iscrizione','rb'));
           $fa->field(); 
-     $tb = new DB_tip_i('tit','titolo',$titolo,'Titolo','');      
+     $tb = new DB_tip_i('tit','titolo',$titolo,'Titolo');      
           $tb->select();
-     $tc = new DB_tip_i('tit+','titolo_plus',$titolo_plus,'Segue titolo','');  
+     $tc = new DB_tip_i('tit+','titolo_plus',$titolo_plus,'Segue titolo');  
           $tc->select();
      $fd = new input(array($cognome,'cognome',25,'Cognome','','ir'));           
           $fd->field();
@@ -220,7 +219,7 @@ foreach($PDO->query($sql) as $row)
           $fg->field();
      $fh = new input(array($localita,'localita',25,'Localit&agrave;','','i')); 
           $fh->field();
-     $ft = new DB_tip_i('pr','prov',$prov,'Provincia','');          
+     $ft = new DB_tip_i('pr','prov',$prov,'Provincia');          
           $ft->select();
      $fj = new input(array($telefono,'telefono',25,'Telefono','','i'));           
           $fj->field();
@@ -251,7 +250,7 @@ foreach($PDO->query($sql) as $row)
           $fz->field();
      $fs = new input(array($archiviare,'archiviare',2,'Coniuge','','i'));   
           $fs->field();  
-     $fty = new DB_tip_i('prt','stampa',$stampa,'Stampa','');          
+     $fty = new DB_tip_i('prt','stampa',$stampa,'Stampa');          
           $fty->select();
      $fx = new input(array($note,'note',33,'Note','','i'));                   
           $fx->field();    
@@ -292,13 +291,13 @@ foreach($PDO->query($sqlv) as $row)
           
 // Incarichi e cariche
      echo "<fieldset><legend> Incarichi e cariche </legend>"; 
-     $t1 = new DB_tip_i('tipo','tipologia',$tipologia,'Socio','');                 
+     $t1 = new DB_tip_i('tipo','tipologia',$tipologia,'Socio');                 
           $t1->select();      
-     $t2 = new DB_tip_i('car','icons_dir',$icons_dir,'Consiglio direttivo','');    
+     $t2 = new DB_tip_i('car','icons_dir',$icons_dir,'Consiglio direttivo');    
           $t2->select();     
-     $t3 = new DB_tip_i('car','icons_ese',$icons_ese,'Comitato esecutivo','');     
+     $t3 = new DB_tip_i('car','icons_ese',$icons_ese,'Comitato esecutivo');     
           $t3->select(); 
-     $t3 = new DB_tip_i('vol','volontario',$volontario,'Volontario','');     
+     $t3 = new DB_tip_i('vol','volontario',$volontario,'Volontario');     
           $t3->select(); 		  
      echo  "</fieldset>";
      echo  "</div>";   //col
