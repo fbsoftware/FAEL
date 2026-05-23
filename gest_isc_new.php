@@ -19,7 +19,7 @@ $(function () {
 
 });
 </script>
-<<?php 
+<?php 
 echo "<body>";
 //include_once 'include_gest.php';
 $tipo= isset($_GET['pag']) ? $_GET['pag'] : 'I';
