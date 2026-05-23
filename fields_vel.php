@@ -1,20 +1,16 @@
 ﻿<?php
-// aggiunto: ecausale (15/3/18)
-// aggiunto anno (29/03/2023)
-$eid      =$row['eid'];
-$estat    =$row['estat'];
-$enume    =$row['enume'];                        
-$eimporto =$row['eimporto'];
-//$dat = new data($row['edata']);
-//$edata = $dat->flipdata();
-$date	  =date_create($row['edata']);
-$edata 	  =date_format($date,"d/m/Y");
-$enota    =stripcslashes ($row['enota']);
-$eprog    =$row['eprog']; 
-$emezzo   =$row['emezzo']; 
-$erife    =$row['erife'];
-$eassnum  =$row['eassnum'];
-$evento   =$row['evento'];
-$ecausale =$row['ecausale'];
-$eanno    =$row['eanno'];  
+$eid = $row['eid'] ?? '';
+$estat = $row['estat'] ?? '';
+$enume = $row['enume'] ?? '';
+$eimporto = $row['eimporto'] ?? '';
+$date = date_create($row['edata'] ?? '');
+$edata = $date ? date_format($date, 'd/m/Y') : '';
+$enota = stripcslashes($row['enota'] ?? '');
+$eprog = $row['eprog'] ?? '';
+$emezzo = $row['emezzo'] ?? '';
+$erife = $row['erife'] ?? '';
+$eassnum = $row['eassnum'] ?? '';
+$evento = $row['evento'] ?? '';
+$ecausale = $row['ecausale'] ?? '';
+$eanno = $row['eanno'] ?? '';
 ?>

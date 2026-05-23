@@ -1,6 +1,4 @@
-﻿<?php
-include_once 'funzioni/utility.php';
-
+<?php
 $id = $row['id'] ?? '';
 $stato = $row['stato'] ?? '';
 $numero = $row['numero'] ?? '';
@@ -13,8 +11,8 @@ $cap = $row['cap'] ?? '';
 $localita = utf8_decode($row['localita'] ?? '');
 $provincia = $row['provincia'] ?? '';
 $telefono = $row['telefono'] ?? '';
-$date = date_create($row['data_inserimento'] ?? '');
-$data_inserimento = $date ? date_format($date, 'd/m/Y') : '';
 $stampa = $row['stampa'] ?? '';
 $note = utf8_decode($row['note'] ?? '');
+$tipo = $row['tipo'] ?? '';
+$categoria = $row['categoria'] ?? '';
 ?>
