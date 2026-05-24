@@ -11,6 +11,7 @@ $tcol1 = $_POST['tcol1'] ?? '';
 $tcol2 = $_POST['tcol2'] ?? '';
 $tcol3 = $_POST['tcol3'] ?? '';
 $tmenu = $_POST['tmenu'] ?? '';
+$tbordo = $_POST['tbordo'] ?? '';
 $tcolscu = $_POST['tcolscu'] ?? '';
 $tcolchi = $_POST['tcolchi'] ?? '';
 ?>

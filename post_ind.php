@@ -15,4 +15,6 @@ $date = date_create($_POST['data_inserimento'] ?? '');
 $data_inserimento = $date ? date_format($date, 'd/m/Y') : '';
 $stampa = $_POST['stampa'] ?? '';
 $note = htmlspecialchars($_POST['note'] ?? '', ENT_QUOTES);
+$tipo = $_POST['tipo'] ?? '';
+$categoria = $_POST['categoria'] ?? '';
 ?>

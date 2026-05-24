@@ -9,8 +9,8 @@ $eprog = $_POST['eprog'] ?? '';
 $emezzo = $_POST['emezzo'] ?? '';
 $erife = $_POST['erife'] ?? '';
 $eassnum = $_POST['eassnum'] ?? '';
-$ecausale = $_POST['ecausale'] ?? '';
-$enota = $_POST['enota'] ?? '';
 $evento = $_POST['evento'] ?? '';
+$ecausale = $_POST['ecausale'] ?? '';
 $eanno = $_POST['eanno'] ?? '';
+$enota = $_POST['enota'] ?? '';
 ?>
