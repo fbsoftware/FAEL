@@ -9,13 +9,15 @@ $nome = htmlspecialchars($_POST['nome'] ?? '', ENT_QUOTES);
 $indirizzo = htmlspecialchars($_POST['indirizzo'] ?? '', ENT_QUOTES);
 $cap = $_POST['cap'] ?? '';
 $localita = htmlspecialchars($_POST['localita'] ?? '', ENT_QUOTES);
-$provincia = strtoupper($_POST['provincia'] ?? '');
+$prov = $_POST['prov'] ?? '';
 $telefono = $_POST['telefono'] ?? '';
 $cellulare = $_POST['cellulare'] ?? '';
 $cod_fisc = strtoupper($_POST['cod_fisc'] ?? '');
 $nascita_luogo = htmlspecialchars($_POST['nascita_luogo'] ?? '', ENT_QUOTES);
 $nascita_provincia = $_POST['nascita_provincia'] ?? '';
+$prov_na = $_POST['prov_na'] ?? '';
 $nascita_nazione = $_POST['nascita_nazione'] ?? '';
+$provincia = strtoupper($_POST['provincia'] ?? '');
 
 $nascita_data = '';
 if (!empty($_POST['nascita_data'])) {
@@ -47,8 +49,6 @@ $icons_dir = $_POST['icons_dir'] ?? '';
 $icons_garan = $_POST['icons_garan'] ?? '';
 $stampa = $_POST['stampa'] ?? '';
 $archiviare = $_POST['archiviare'] ?? '';
-$prov = $_POST['prov'] ?? '';
-$prov_na = $_POST['prov_na'] ?? '';
 $email = $_POST['email'] ?? '';
 $note = htmlspecialchars($_POST['note'] ?? '', ENT_QUOTES);
 $volontario = $_POST['volontario'] ?? '';
