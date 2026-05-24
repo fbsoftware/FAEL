@@ -1,4 +1,6 @@
 ﻿<?php
+require_once 'funzioni/dateUtils.php';
+
 $id = $row['id'] ?? '';
 $stato = $row['stato'] ?? '';
 $numero_iscrizione = $row['numero_iscrizione'] ?? '';
@@ -16,12 +18,9 @@ $cod_fisc = $row['cod_fisc'] ?? '';
 $nascita_luogo = htmlspecialchars($row['nascita_luogo'] ?? '', ENT_QUOTES);
 $prov_na = $row['prov_na'] ?? '';
 $nascita_nazione = $row['nascita_nazione'] ?? '';
-$date = date_create($row['nascita_data'] ?? '');
-$nascita_data = $date ? date_format($date, 'd/m/Y') : '';
-$date = date_create($row['data_iscrizione'] ?? '');
-$data_iscrizione = $date ? date_format($date, 'd/m/Y') : '';
-$date = date_create($row['data_uscita'] ?? '');
-$data_uscita = $date ? date_format($date, 'd/m/Y') : '';
+$nascita_data = parseDbDate($row['nascita_data'] ?? '');
+$data_iscrizione = parseDbDate($row['data_iscrizione'] ?? '');
+$data_uscita = parseDbDate($row['data_uscita'] ?? '');
 $tipologia = $row['tipologia'] ?? '';
 $icons_ese = $row['icons_ese'] ?? '';
 $icons_dir = $row['icons_dir'] ?? '';

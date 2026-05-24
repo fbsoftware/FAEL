@@ -1,4 +1,6 @@
 <?php
+require_once 'funzioni/dateUtils.php';
+
 $numero = $row['ID'] ?? '';
 $titolo = $row['titolo'] ?? '';
 $titolo_plus = $row['titolo_plus'] ?? '';
@@ -8,8 +10,7 @@ $cap = $row['cap'] ?? '';
 $localita = $row['localita'] ?? '';
 $provincia = $row['provincia'] ?? '';
 $telefono = $row['telefono'] ?? '';
-$date = date_create($row['data_inserimento'] ?? '');
-$data_inserimento = $date ? date_format($date, 'd/m/Y') : '';
+$data_inserimento = parseDbDate($row['data_inserimento'] ?? '');
 $stampa = $row['stampa'] ?? '';
 $note = $row['note'] ?? '';
 ?>

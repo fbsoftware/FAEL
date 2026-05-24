@@ -1,10 +1,11 @@
 <?php
+require_once 'funzioni/dateUtils.php';
+
 $vid = $row['vid'] ?? '';
 $vstat = $row['vstat'] ?? '';
 $vnume = $row['vnume'] ?? '';
 $vimporto = $row['vimporto'] ?? '';
-$date = date_create($row['vdata'] ?? '');
-$vdata = $date ? date_format($date, 'd/m/Y') : '';
+$vdata = parseDbDate($row['vdata'] ?? '');
 $vanno = $row['vanno'] ?? '';
 $vprog = $row['vprog'] ?? '';
 $vmezzo = $row['vmezzo'] ?? '';

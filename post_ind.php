@@ -1,4 +1,6 @@
 ﻿<?php
+require_once 'funzioni/dateUtils.php';
+
 $id = $_POST['id'] ?? '';
 $stato = $_POST['stato'] ?? '';
 $numero = $_POST['numero'] ?? '';
@@ -11,8 +13,7 @@ $cap = $_POST['cap'] ?? '';
 $localita = htmlspecialchars($_POST['localita'] ?? '', ENT_QUOTES);
 $provincia = $_POST['provincia'] ?? '';
 $telefono = $_POST['telefono'] ?? '';
-$date = date_create($_POST['data_inserimento'] ?? '');
-$data_inserimento = $date ? date_format($date, 'd/m/Y') : '';
+$data_inserimento = parseInputDate($_POST['data_inserimento'] ?? '');
 $stampa = $_POST['stampa'] ?? '';
 $note = htmlspecialchars($_POST['note'] ?? '', ENT_QUOTES);
 $tipo = $_POST['tipo'] ?? '';
