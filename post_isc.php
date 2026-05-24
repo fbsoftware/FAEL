@@ -1,4 +1,6 @@
-﻿<?php
+<?php
+require_once 'funzioni/dateUtils.php';
+
 $id = $_POST['id'] ?? '';
 $stato = $_POST['stato'] ?? '';
 $numero_iscrizione = $_POST['numero_iscrizione'] ?? '';
@@ -19,29 +21,9 @@ $prov_na = $_POST['prov_na'] ?? '';
 $nascita_nazione = $_POST['nascita_nazione'] ?? '';
 $provincia = strtoupper($_POST['provincia'] ?? '');
 
-$nascita_data = '';
-if (!empty($_POST['nascita_data'])) {
-    $date = DateTime::createFromFormat('d/m/Y', $_POST['nascita_data']);
-    if ($date) {
-        $nascita_data = $date->format('Y-m-d');
-    }
-}
-
-$data_iscrizione = '';
-if (!empty($_POST['data_iscrizione'])) {
-    $date = DateTime::createFromFormat('d/m/Y', $_POST['data_iscrizione']);
-    if ($date) {
-        $data_iscrizione = $date->format('Y-m-d');
-    }
-}
-
-$data_uscita = '';
-if (!empty($_POST['data_uscita'])) {
-    $date = DateTime::createFromFormat('d/m/Y', $_POST['data_uscita']);
-    if ($date) {
-        $data_uscita = $date->format('Y-m-d');
-    }
-}
+$nascita_data = parseInputDate($_POST['nascita_data'] ?? '', 'd/m/Y', 'Y-m-d');
+$data_iscrizione = parseInputDate($_POST['data_iscrizione'] ?? '', 'd/m/Y', 'Y-m-d');
+$data_uscita = parseInputDate($_POST['data_uscita'] ?? '', 'd/m/Y', 'Y-m-d');
 
 $tipologia = $_POST['tipologia'] ?? '';
 $icons_ese = $_POST['icons_ese'] ?? '';

@@ -1,5 +1,6 @@
 <?php
 include_once 'funzioni/utility.php';
+require_once 'funzioni/dateUtils.php';
 
 $id = $row['id'] ?? '';
 $stato = $row['stato'] ?? '';
@@ -13,8 +14,7 @@ $cap = $row['cap'] ?? '';
 $localita = htmlspecialchars($row['localita'] ?? '', ENT_QUOTES);
 $provincia = $row['provincia'] ?? '';
 $telefono = $row['telefono'] ?? '';
-$date = date_create($row['data_inserimento'] ?? '');
-$data_inserimento = $date ? date_format($date, 'd/m/Y') : '';
+$data_inserimento = parseDbDate($row['data_inserimento'] ?? '');
 $stampa = $row['stampa'] ?? '';
 $note = htmlspecialchars($row['note'] ?? '', ENT_QUOTES);
 ?>

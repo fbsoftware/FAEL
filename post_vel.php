@@ -1,9 +1,10 @@
 <?php
+require_once 'funzioni/dateUtils.php';
+
 $eid = $_POST['eid'] ?? '';
 $estat = $_POST['estat'] ?? '';
 $enume = $_POST['enume'] ?? '';
-$date = date_create($_POST['edata'] ?? '');
-$edata = $date ? date_format($date, 'd/m/Y') : '';
+$edata = parseInputDate($_POST['edata'] ?? '');
 $eimporto = number_format($_POST['eimporto'] ?? 0, 2, '.', '');
 $eprog = $_POST['eprog'] ?? '';
 $emezzo = $_POST['emezzo'] ?? '';

@@ -1,9 +1,10 @@
 ﻿<?php
+require_once 'funzioni/dateUtils.php';
+
 $vid = $_POST['vid'] ?? '';
 $vstat = $_POST['vstat'] ?? '';
 $vnume = $_POST['vnume'] ?? '';
-$date = date_create($_POST['vdata'] ?? '');
-$vdata = $date ? date_format($date, 'd/m/Y') : '';
+$vdata = parseInputDate($_POST['vdata'] ?? '');
 $vimporto = number_format($_POST['vimporto'] ?? 0, 2, '.', '');
 $vanno = $_POST['vanno'] ?? '';
 $vprog = $_POST['vprog'] ?? '';

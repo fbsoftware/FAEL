@@ -1,10 +1,11 @@
 ﻿<?php
+require_once 'funzioni/dateUtils.php';
+
 $eid = $row['eid'] ?? '';
 $estat = $row['estat'] ?? '';
 $enume = $row['enume'] ?? '';
 $eimporto = $row['eimporto'] ?? '';
-$date = date_create($row['edata'] ?? '');
-$edata = $date ? date_format($date, 'd/m/Y') : '';
+$edata = parseDbDate($row['edata'] ?? '');
 $enota = stripcslashes($row['enota'] ?? '');
 $eprog = $row['eprog'] ?? '';
 $emezzo = $row['emezzo'] ?? '';
