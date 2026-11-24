@@ -15,7 +15,8 @@
             {
                 $( "#alfa" ).autocomplete(
                     {
-                    source: "i_alfa.php",
+                    minLength: 2,
+                    source: "autocomplete_indirizzi.php",
                     select: function(event, ui)
                          {
                          $('#id').val(ui.item.id);
@@ -23,7 +24,8 @@
                     });
                $( "#nume" ).autocomplete(
                     {
-                    source: "i_nume.php",
+                    minLength: 1,
+                    source: "autocomplete_indirizzi.php",
                     select: function(event, ui)
                          {
                          $('#id').val(ui.item.id);

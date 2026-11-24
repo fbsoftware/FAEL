@@ -16,7 +16,8 @@ $tipo         = $_SESSION['pag'];
             {
                 $( "#alfa" ).autocomplete(
                     {
-                    source: "alfa.php",
+                    minLength: 2,
+                    source: "autocomplete_anagrafico.php",
                     select: function(event, ui)
                          {
                          $('#id').val(ui.item.id);
@@ -24,7 +25,8 @@ $tipo         = $_SESSION['pag'];
                     });
                $( "#nume" ).autocomplete(
                     {
-                    source: "nume.php",
+                    minLength: 1,
+                    source: "autocomplete_anagrafico.php",
                     select: function(event, ui)
                          {
                          $('#id').val(ui.item.id);
